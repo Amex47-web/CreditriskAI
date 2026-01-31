@@ -70,27 +70,27 @@ Unlike traditional models that rely solely on balance sheet ratios, this engine 
 
 ```mermaid
 graph TD
-    User[User / Analyst] -->|Enters Ticker (e.g. AAPL)| Frontend[Next.js Dashboard]
-    Frontend -->|POST /analyze| Backend[FastAPI Server]
+    User["User / Analyst"] -->|"Enters Ticker (e.g. AAPL)"| Frontend["Next.js Dashboard"]
+    Frontend -->|"POST /analyze"| Backend["FastAPI Server"]
     
     subgraph "Backend Processing"
-        Backend -->|Fetch Live Data| YF[Yahoo Finance]
-        Backend -->|Check Vector DB| FAISS[FAISS Vector Store]
+        Backend -->|"Fetch Live Data"| YF["Yahoo Finance"]
+        Backend -->|"Check Vector DB"| FAISS["FAISS Vector Store"]
         
-        FAISS -- Missing? --> SEC[SEC EDGAR]
-        SEC -->|Download 10-K| Ingest[Ingestion Pipeline]
-        Ingest -->|Chunk & Embed| FAISS
+        FAISS -- "Missing?" --> SEC["SEC EDGAR"]
+        SEC -->|"Download 10-K"| Ingest["Ingestion Pipeline"]
+        Ingest -->|"Chunk & Embed"| FAISS
         
-        FAISS -- Found --> Retriever[Semantic Retriever]
-        Retriever -->|Context| Sentiment[FinBERT Model]
+        FAISS -- "Found" --> Retriever["Semantic Retriever"]
+        Retriever -->|"Context"| Sentiment["FinBERT Model"]
         
-        YF -->|Ratios| RiskModel[XGBoost Classifier]
-        Sentiment -->|Score| RiskModel
+        YF -->|"Ratios"| RiskModel["XGBoost Classifier"]
+        Sentiment -->|"Score"| RiskModel
     end
     
-    RiskModel -->|Probability of Default| Explainer[SHAP Explainer]
-    Explainer -->|Key Drivers| Response
-    Retriever -->|Text Evidence| Response
+    RiskModel -->|"Probability of Default"| Explainer["SHAP Explainer"]
+    Explainer -->|"Key Drivers"| Response
+    Retriever -->|"Text Evidence"| Response
     
     Response --> Frontend
 ```
