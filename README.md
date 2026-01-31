@@ -1,4 +1,4 @@
-# 🏦 AI-Powered Credit Risk & Default Prediction System
+#  AI-Powered Credit Risk & Default Prediction System
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
@@ -7,7 +7,7 @@
 ![React](https://img.shields.io/badge/React-18-61DAFB)
 ![RAG](https://img.shields.io/badge/AI-RAG%20Engine-purple)
 
-## 🚀 Overview
+##  Overview
 
 The **Credit Risk & Default Prediction System** is an enterprise-grade, open-source platform designed to modernize corporate credit analysis. By combining **quantitative financial modeling** with **qualitative NLP analysis**, this system provides a holistic view of a company's financial health.
 
@@ -15,7 +15,7 @@ Unlike traditional models that rely solely on balance sheet ratios, this engine 
 
 ---
 
-## 🌟 Industry-Level Features
+##  Industry-Level Features
 
 ### 1. **Hybrid Risk Engine (Quantitative + Qualitative)**
    - **Quantitative**: XGBoost classifiers trained on historical default data analyze key ratios (Debt/Equity, Current Ratio, ROE, Altman Z-Score).
@@ -39,7 +39,7 @@ Unlike traditional models that rely solely on balance sheet ratios, this engine 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### **Frontend (Client-Side)**
 - **Framework**: [Next.js 14](https://nextjs.org/) (React, TypeScript)
@@ -66,7 +66,7 @@ Unlike traditional models that rely solely on balance sheet ratios, this engine 
 
 ---
 
-## 🏗️ Architecture Flow
+##  Architecture Flow
 
 ```mermaid
 graph TD
@@ -139,7 +139,7 @@ npm run dev
 
 ---
 
-## 🎯 Accuracy & Performance
+##  Accuracy & Performance
 - **Model AUC-ROC**: 0.89 (Validated on S&P 500 historical data)
 - **Latency**: 
   - Cached Companies: < 200ms
@@ -148,7 +148,7 @@ npm run dev
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 We welcome contributions! Please follow these steps:
 1. Fork the repo.
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`).
